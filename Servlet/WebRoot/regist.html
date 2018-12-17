@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>regist</title>
+		<style type="text/css">
+			div{
+				margin: 0px auto;
+				width:400px;
+				height:200px;
+				border:1px solid black;
+				background-color: antiquewhite;
+				text-align: center;
+			}
+			table{
+				text-align: center;
+			}
+			#zc{
+				background-color: yellow;
+				color: black;
+			}
+			label{
+				color: aqua;
+			}
+			h3{
+				color: deeppink;
+			}
+			#tishi1,#tishi2{
+				color: green;
+			}
+		</style>
+		<script type="text/javascript">		
+			function checkPassword(){
+				var pwd=document.getElementById("pwd").value;
+				var tishi1=document.getElementById("tishi1");
+				if(pwd!=null&&pwd!=""){
+					if(pwd.length<6){
+						tishi1.innerText = "密码长度不正确！";
+						return false;
+					}
+					return true;
+				}
+			}
+			
+			function checkRepassword(){
+				var pwd=document.getElementById("pwd").value;
+				var repwd=document.getElementById("repwd").value;
+				var tishi2=document.getElementById("tishi2");
+				if(repwd!=null&&repwd!=""){
+					if(repwd!=pwd){
+						tishi2.innerText = "两次密码不一致!";
+						return false;
+					}
+					return true;
+				}
+			}
+			
+			function clear1() {
+				var tishi1=document.getElementById("tishi1");
+				tishi1.innerText = "";
+			}
+			
+			function clear2() {
+				var tishi2=document.getElementById("tishi2");
+				tishi2.innerText = "";
+			}
+			
+			function checkAll(){
+				if(checkPassword()&&checkRepassword()){
+					return true;
+				}else{
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<form action="regist.do" method="post" onsubmit="return checkAll()">
+				<table>
+					<tr>
+						<td></td>
+						<td><h3>注册</h3></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label>用户名：</label></td>
+						<td><input type="text" name="username" id="user" placeholder="请输入用户名"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label>密码：</label></td>
+						<td><input type="password" name="password" id="pwd" placeholder="请输入密码"  onblur="checkPassword()" onfocus="clear1()"></td>
+						<td><span id="tishi1"></span></td>
+					</tr>
+					<tr>
+						<td><label>确定密码：</label></td>
+						<td><input type="password" name="repassword" id="repwd" placeholder="请再次输入密码" onblur="checkRepassword()" onfocus="clear2()"></td>
+						<td><span id="tishi2"></span></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" value="注册" id="zc" ></td>
+						<td></td>
+					</tr>
+				</table>
+				
+			</form>
+		</div>
+	</body>
+</html>

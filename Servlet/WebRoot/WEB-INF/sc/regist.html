@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>login</title>
+		<style type="text/css">
+			div{
+				width:400px;
+				height:200px;
+				border:1px solid black;
+				margin: 0px auto;
+			}
+		</style>
+		<script type="text/javascript">
+			function check() {
+				var pwd=document.getElementById("pwd").value;
+				var repwd=document.getElementById("repwd").value;
+				var span=document.getElementById("span");
+				if(pwd!=repwd){
+					span.innerText="密码不一致！";
+				}
+			}
+			function clear() {
+				var span=document.getElementById("span");
+				span.innerText="";
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<form action="regist.do" method="get">
+				用户名：<input type="text" name="username" id="user" placeholder="请输入用户名"><br>
+				密码：<input type="password" name="password" id="pwd" placeholder="请输入密码"><br>
+				确定密码：<input type="password" name="repassword" id="repwd" placeholder="请再次输入密码" onblur="check()" onfocus="clear()"><span id="span"></span><br>
+				<input type="submit" value="注册" id="sub" >
+			</form>
+		</div>
+	</body>
+</html>

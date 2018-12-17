@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>login</title>
+		<style type="text/css">
+			div{
+				margin: 0px auto;
+				width:300px;
+				height:200px;
+				border:1px solid black;
+				background-color: beige;
+				text-align: center;
+			}
+			table{
+				text-align: center;
+			}
+			#dl,#zc{
+				background-color: greenyellow;
+				color: coral;
+			}
+			label{
+				color: cornflowerblue;
+			}
+			h3{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<form action="login.do" method="post">
+				<table>
+					<tr>
+						<td colspan="3"><h3>登录</h3></td>
+					</tr>
+					<tr>
+						<td><label>用户名：</label></td>
+						<td><input type="text" name="username" id="user" placeholder="请输入用户名"><br></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label>密码：</label></td>
+						<td><input type="password" name="password" id="pwd" placeholder="请输入密码"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<input type="submit" value="登录" id="dl">
+							<input type="button" value="注册" id="zc" onclick="window.open('regist.html')">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
