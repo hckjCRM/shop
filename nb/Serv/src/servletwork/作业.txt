@@ -1,0 +1,4 @@
+1、完成login.html页面和后台servlet以及数据库的登录功能，登录成功，在页面展示login successfull！登录失败，在页面展示login error！
+2、完成regist.html页面和后台servlet以及数据库的注册功能，并且让登录和注册联动；
+3、进阶：
+	完成登录成功后，页面展示EMP表的所有数据，展示在表格中！
