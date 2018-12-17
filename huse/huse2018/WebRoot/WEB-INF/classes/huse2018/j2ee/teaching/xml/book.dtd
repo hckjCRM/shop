@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT 武侠小说 (书名,价格,简介+,出版日期)>
+	<!ELEMENT 言情小说 (书名,价格,简介,出版时间)>
+	<!ELEMENT 出版时间 (年份,月份,日份)>
+	<!ELEMENT 书名 (#PCDATA)>
+	<!ELEMENT 价格 (#PCDATA)>
+	<!ELEMENT 简介 (#PCDATA)>
+	<!ELEMENT 出版日期 (#PCDATA)>
+	<!ELEMENT 年份 (#PCDATA)>
+	<!ELEMENT 月份 (#PCDATA)>
+	<!ELEMENT 日份 (#PCDATA)>
+	<!ATTLIST 书名 hot CDATA #IMPLIED>
+	<!ATTLIST 书名 isdn CDATA #IMPLIED>
